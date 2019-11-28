@@ -81,6 +81,12 @@ class EventProcessor:
                 for x in range(0, WEIGHT_SAMPLES-1):
                     self._sum += self._events[x]
                 self._weight = self._sum/WEIGHT_SAMPLES
+                
+                temp_c = read_temp()
+                streamer.log("temperature (C)", temp_c)
+                print str(temp_c) + " C"
+                time.sleep(.5)
+                
                 self._measureCnt = 0
                 print str(self._weight) + " Kg"
                 streamer.log("weight (Kg)", self._weight)
@@ -306,11 +312,6 @@ class Wiiboard:
 
 def main():
     processor = EventProcessor()
-    
-    temp_c = read_temp()
-    streamer.log("temperature (C)", temp_c)
-    print str(temp_c) + " C"
-    time.sleep(.5)
     
     board = Wiiboard(processor)
     if len(sys.argv) == 1:
