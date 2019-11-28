@@ -85,7 +85,7 @@ class EventProcessor:
                 temp_c = read_temp()
                 streamer.log("temperature (C)", temp_c)
                 print str(temp_c) + " C"
-                time.sleep(.5)
+                time.sleep(5)
                 
                 self._measureCnt = 0
                 print str(self._weight) + " Kg"
