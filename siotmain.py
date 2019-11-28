@@ -38,12 +38,6 @@ def read_temp():
         temp_c = float(temp_string) / 1000.0
         return temp_c
 
-while True:
-    temp_c = read_temp()
-    streamer.log("temperature (C)", temp_c)
-    print str(temp_c) + " C"
-    time.sleep(.5)
-
 #FOR Wii Balance Board (scales)
 
 # --------- User Settings ---------
@@ -312,7 +306,12 @@ class Wiiboard:
 
 def main():
     processor = EventProcessor()
-
+    
+    temp_c = read_temp()
+    streamer.log("temperature (C)", temp_c)
+    print str(temp_c) + " C"
+    time.sleep(.5)
+    
     board = Wiiboard(processor)
     if len(sys.argv) == 1:
         print "Discovering board..."
