@@ -58,10 +58,10 @@ message = message + str(round(sum(dc_pred)*(1/3)*0.00595, 2)) + " kg of LPG. You
 message = message + str(round(5 - ((sum(dc_pred) + sum(c_pred))*1/3*0.00595), 2)) + " kg of LPG remaining - approximately "
 message = message + str(round((5 - ((sum(dc_pred) + sum(c_pred))*1/3*0.00595))*2.8, 2)) + " hours of cooking."
 
-client = Client("ACea8b6d2fbbe28cfd28548023fc94f2b8", "07d544a8f0f6a237c50d248a6a00970f")
+client = Client("XXXXXXXXXXXXXXXXXXXXXXXXXX", "XXXXXXXXXXXXXXXXXXXXXXXXX") # Removed for security 
 
-client.messages.create(to="+447989028158",
-                       from_="+19548748373",
+client.messages.create(to="+XXxXXXXXXXX",   # Phone numbers have been removed for security 
+                       from_="+XXXXXXXXXXX",
                        body=message)
 
 os.remove("day_data.csv")
