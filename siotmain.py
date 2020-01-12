@@ -9,7 +9,7 @@ import os
 import glob
 from ISStreamer.Streamer import Streamer
 
-streamer = Streamer(bucket_name="SIOT-Main", bucket_key="PAQQKQLMDC49", access_key="ist_7wHIHYwnwlSlqFtbB_T3akOmk4yld5fr")
+streamer = Streamer(bucket_name="SIOT-Main", bucket_key="XXXXXXXXX", access_key="XXXXXXXXXXXXXXXXXXXXXXX") # Bucket/Access key have been removed for security
 
 
 #FOR DSB18B20 Temperature Sensor
