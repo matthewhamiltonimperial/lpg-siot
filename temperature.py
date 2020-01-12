@@ -4,8 +4,7 @@ import time
 from ISStreamer.Streamer import Streamer
 import csv
 
-streamer = Streamer(bucket_name="Temperature Stream", bucket_key="piot_temp_stream031815", access_key="ist_7wHIHYwnwlSlqFtbB_T3akOmk4yld5fr")
-
+streamer = Streamer(bucket_name="Temperature Stream", bucket_key="XXXXXXXXXXx", access_key="XXXXXXXXXXXXXXXXXXXXXXXXXX") # Removed for security
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
